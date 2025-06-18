@@ -77,7 +77,7 @@ void main() {
     float ins  = fbm(vec2(ns_b, ns_a));
 
     // Map noise -> greys (0.25 dark → 0.9 light)
-    vec3 c1 = mix(vec3(0.3), vec3(0.9), ins + shift);
+    vec3 c1 = mix(vec3(0.3), vec3(0.3), ins + shift);
 
     // Add extra contrast using another noise term (ins-gradient)
     vec3 baseSmoke = c1 + vec3(ins - gradient);
